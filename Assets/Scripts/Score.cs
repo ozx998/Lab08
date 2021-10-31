@@ -5,14 +5,15 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     public GameObject Text;
-    public float timer = 5.3f;
+    public float timer = 5.02f;
     public float delaytime;
     public int score;
-    public bool scorestart = false;
+    public bool deletescore = true;
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("scoreIncrease", 1, 1);
+        InvokeRepeating("startscore",1,1);
     }
     
     // Update is called once per frame
@@ -21,16 +22,17 @@ public class Score : MonoBehaviour
         delaytime += Time.deltaTime;
         if( timer <= delaytime)
         {
-            scorestart = true;
+            deletescore = false;
             
         }
         Text.GetComponent<Text>().text = "Score: " + score;
     }
     void startscore()
     {
-        while(scorestart == true)
+        if(deletescore == true)
         {
-            InvokeRepeating("scoreIncrease", 1, 1);
+            
+            score = 0;
         }
     }
     void scoreIncrease()

@@ -653,10 +653,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Text: {fileID: 1792349806}
-  timer: 5.3
+  timer: 5.02
   delaytime: 0
   score: 0
-  scorestart: 0
+  deletescore: 1
 --- !u!4 &701213896
 Transform:
   m_ObjectHideFlags: 0

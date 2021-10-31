@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     
@@ -20,5 +20,12 @@ public class Player : MonoBehaviour
 
       
         
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Obstacle")
+        {
+            SceneManager.LoadScene("LoseScene");
+        }
     }
 }
