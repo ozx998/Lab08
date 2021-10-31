@@ -7,6 +7,8 @@ public class Spawnerscript : MonoBehaviour
     public GameObject[] SpawnObject;
     float PositionY;
 
+
+    public int score;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,7 @@ public class Spawnerscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        
 
 
     }

@@ -6,9 +6,11 @@ public class Player : MonoBehaviour
 {
     
     public float speed;
-    
-    
-    // Update is called once per frame
+    void Start()
+    {
+        
+    }
+        // Update is called once per frame
     void Update()
     {
 
@@ -17,6 +19,6 @@ public class Player : MonoBehaviour
         transform.position = transform.position + new Vector3(0 , verticalInput * speed * Time.deltaTime, 0);
 
       
-
+        
     }
 }
