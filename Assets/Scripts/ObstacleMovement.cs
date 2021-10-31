@@ -15,7 +15,7 @@ public class ObstacleMovement : MonoBehaviour
     void Update()
     {
         transform.Translate(new Vector3(xSpeed*Time.deltaTime, 0, 0f));
-        if (transform.position.x < -10)
+        if (transform.position.x < -9)
         {
             Destroy(this.gameObject);
         }
